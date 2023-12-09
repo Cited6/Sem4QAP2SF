@@ -20,10 +20,10 @@ public class Airport {
     @ManyToMany(mappedBy = "airports")
     private Set<Aircraft> aircraft;
 
-    // Constructors, getters, and setters
+
 
     public Airport() {
-        // Default constructor
+
     }
 
     public Airport(String name, String code, City city) {
@@ -32,9 +32,7 @@ public class Airport {
         this.city = city;
     }
 
-    // Other constructors if needed
 
-    // Getters and setters
 
     public Long getId() {
         return id;

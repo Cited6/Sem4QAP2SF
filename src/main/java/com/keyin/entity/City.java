@@ -17,10 +17,10 @@ public class City {
     @OneToMany(mappedBy = "city", cascade = CascadeType.ALL)
     private Set<Airport> airports;
 
-    // Constructors, getters, and setters
+
 
     public City() {
-        // Default constructor
+
     }
 
     public City(String name, String state, int population) {
@@ -29,9 +29,7 @@ public class City {
         this.population = population;
     }
 
-    // Other constructors if needed
 
-    // Getters and setters
 
     public Long getId() {
         return id;

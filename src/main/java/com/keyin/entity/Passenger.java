@@ -21,10 +21,10 @@ public class Passenger {
     @ManyToMany(mappedBy = "passengers")
     private Set<Aircraft> aircraft;
 
-    // Constructors, getters, and setters
+
 
     public Passenger() {
-        // Default constructor
+
     }
 
     public Passenger(String firstName, String lastName, String phoneNumber, City city) {
@@ -34,9 +34,7 @@ public class Passenger {
         this.city = city;
     }
 
-    // Other constructors if needed
 
-    // Getters and setters
 
     public Long getId() {
         return id;

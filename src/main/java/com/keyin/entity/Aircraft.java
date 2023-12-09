@@ -28,10 +28,10 @@ public class Aircraft {
             inverseJoinColumns = @JoinColumn(name = "airport_id"))
     private Set<Airport> airports;
 
-    // Constructors, getters, and setters
+
 
     public Aircraft() {
-        // Default constructor
+
     }
 
     public Aircraft(String type, String airlineName, int numberOfPassengers) {
@@ -40,9 +40,6 @@ public class Aircraft {
         this.numberOfPassengers = numberOfPassengers;
     }
 
-    // Other constructors if needed
-
-    // Getters and setters
 
     public Long getId() {
         return id;
