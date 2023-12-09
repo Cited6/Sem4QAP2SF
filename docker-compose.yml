@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:latest
+    container_name: my_postgres_db
+    environment:
+      POSTGRES_DB: QAP2Sem4
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1Abbypeach!
+    ports:
+      - "5432:5432"
+
+  # Spring Boot Application
+  spring-app:
+    image: sem4qapsf-image:latest
+    container_name: my_spring_app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/your_database_name
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 1Abbypeach!
